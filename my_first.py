@@ -13,6 +13,7 @@ conn = pyodbc.connect('DRIVER={SQL Server};'
                      'Authentication=ActiveDirectoryPassword'
                      'Trusted_Connection=yes;'
                      )
+cursor = con.cursor()
 sqlquery2 = ''' select top 600 *
 from remotedb r
 where id >919536641 and [_NAME] like '%Cocinas Prensas.TT2%'
